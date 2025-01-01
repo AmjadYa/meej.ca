@@ -1,0 +1,31 @@
+---
+const { props } = Astro;
+---
+
+<div class="mb-8">
+  <header>
+    <h1
+	  id={props.title}
+      class="text-4xl lg:text-6xl font-bold mb-4 text-center text-secondary"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
+      {props.title}
+    </h1>
+  </header>
+  <div class="mt-4 mb-4 h-0.5 bg-secondary" data-aos="fade-up" data-aos-duration="2500">
+  </div>
+  <section
+    class="flex flex-wrap gap-4 w-full"
+    data-aos="fade-up"
+    data-aos-duration="2500"
+  >
+    {
+      props.images?.map(({ href, alt }) => (
+        <div class="max-w-full flex-1">
+          <img class="object-cover w-full h-full" alt={alt} src={href} />
+        </div>
+      ))
+    }
+  </section>
+</div>

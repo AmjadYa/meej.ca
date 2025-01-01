@@ -71,7 +71,7 @@ To dodge the pedestrian, the staging system was put to simple use. Upon crossing
 
 <h4>Offroading</h4>
 <p>
-The offroad section consists of five simple phases. First, the robot drives forwards at an angle towards the hill for a set period of sim time. It’s not particularly sensitive as to where the robot ends up, so this worked fine. Then the robot would turn until it detected the windows of the car through the blue mask shown in the attached figure. These windows are a very particular shade of blue, so it doesn’t get confused by the clue boards. It then PIDs directly toward the centroid of these pixels until they make up a certain percentage of the screen. Finally, it turns right until the pink line is centred in its view, thus catching a view of the clue, and drives towards the tunnel.
+The offroad section consists of five simple phases. First, the robot drives forwards at an angle towards the hill for a set period of sim time. It’s not particularly sensitive as to where the robot ends up, so this worked fine. Then the robot would turn until it detected the windows of the car through the blue mask shown in the figure below. These windows are a very particular shade of blue, so it doesn’t get confused by the clue boards. It then PIDs directly toward the centroid of these pixels until they make up a certain percentage of the screen. Finally, it turns right until the pink line is centred in its view, thus catching a view of the clue, and drives towards the tunnel.
 </p>
 <p>
 <img src="/images/Blue_Filter.png" alt="Filtering for car windows" style="max-width:40%; display:block; margin:auto;" />
@@ -132,7 +132,7 @@ Notice in the figure above, <code>x_train</code> and <code>y_train</code> are co
 
 <h4>Failure Cases</h4>
 <p>
-Occasionally, when segmenting the letters, there is enough overlap to cause a failed prediction. There was an attempt to solve this by intentionally training on overlapped images, however not enough was manually captured. In Section 3.1, we discuss our performance during competition. Unluckily, one of our predictions failed as a result of this overlap; however, this is a rare event. 
+Occasionally, when segmenting the letters, there is enough overlap to cause a failed prediction. There was an attempt to solve this by intentionally training on overlapped images, however not enough was manually captured. Above, we discussed our performance during competition. Unluckily, one of our predictions failed as a result of this overlap; however, this is a rare event. 
 <a href="https://drive.google.com/drive/folders/1jROyw9Q_FamL0aAo_l1EG_6aiC61KTwb?usp=sharing" target="_blank">You can view the individual letters that were used to train the model here</a>. You may notice some of them have a lot of overlap (by design).
 </p>
 
@@ -147,13 +147,13 @@ The robot performed almost as well as designed during competition. It correctly 
 
 <h3>Unadopted Other Attempts</h3>
 <p>
-Notice, in Figure 6 which shows the GUI, that there is a button labeled “Record” with a red light next to it. This was because due to conflicts integrating driving and clue detection together, I tried to quickly create an imitation learning model to navigate the robot. The record button would take screenshots every 100ms and create a CSV file which mapped the current linear and angular velocity of the robot to the image. Images were then fed into 
+Notice, in the figure which shows the GUI, that there is a button labeled “Record” with a red light next to it. This was because due to conflicts integrating driving and clue detection together, I tried to quickly create an imitation learning model to navigate the robot. The record button would take screenshots every 100ms and create a CSV file which mapped the current linear and angular velocity of the robot to the image. Images were then fed into 
 <a href="https://colab.research.google.com/drive/1jRNEESqv6ywCmLLXx__tK_0oSqThVjV7?usp=sharing" target="_blank">another CNN</a> with very similar architecture to the one used for training on letters. Surprisingly this method had accurately navigated the first segment of the road up to the second clue board. However, it became quickly apparent that we did not have the necessary compute (shoddy laptop :/) in order to use an imitation learning model in time for the competition, thus it was scrapped and the emergency teleportation method was used instead.
 </p>
 
 <h3>Improvements for Future</h3>
 <p>
-The primary area in need of improvement is the integration of clue detection and driving. We would have used a very wide angled camera so that the clues could be seen without stopping, and altered the homography such that it could undo the resulting distortion. This would also include getting the robot to reach the top of the hill, and ironing out the CNN overlap issue discussed in Section 2.2.5. Secondly, there is a lot of potential to optimize the usage of nodes to separate actions which needed to occur simultaneously on the robot.
+The primary area in need of improvement is the integration of clue detection and driving. We would have used a very wide angled camera so that the clues could be seen without stopping, and altered the homography such that it could undo the resulting distortion. This would also include getting the robot to reach the top of the hill and ironing out the CNN overlap issue. Secondly, there is a lot of potential to optimize the usage of nodes to separate actions which needed to occur simultaneously on the robot.
 </p>
 
 <hr />
@@ -181,7 +181,5 @@ ChatGPT was used to help implement ideas that we already had, and for debugging.
 <img src="/images/tensor.png" alt="Troubleshooting with ChatGPT" style="max-width:70%; display:block; margin:auto;" />
 </p>
 <p>
-In fact, this was a notable conversation with ChatGPT, as it helped to reveal that there was a mismatch between the version of the model in Google Colab, and the one used locally! (Took a while to figure out what was wrong.)
+In fact, this was a notable conversation with ChatGPT, as it helped to reveal that there was a mismatch between the version of the model in Google Colab and the one used locally! (Took a while to figure out what was wrong.)
 </p>
-
-<!-- ------------- END CONVERTED HTML REPORT ------------- -->

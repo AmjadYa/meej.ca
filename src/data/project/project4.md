@@ -11,7 +11,7 @@ link: https://github.com/AmjadYa/
 
 They told me it would be the hardest semester of my life. (They were right.)
 
-In the summer of 2023, I had to build a robot that could navigate an obstacle course, collect coins off the ground, and complete laps for points with no human interference. Since we thought things weren't hard enough, our team was **one of two** to use the zipline to short-cut a part of the course.
+In the summer of 2023, I had to build a robot that could navigate an obstacle course, collect coins off the ground and complete laps for points with no human interference. Since we thought things weren't hard enough, our team was **one of two** to use the zipline to short-cut a part of the course.
 
 We split the work up into three disciplines: Electrical, Hardware and Software and progressively integrated components together.
 
@@ -24,7 +24,7 @@ We split the work up into three disciplines: Electrical, Hardware and Software a
 
 ## Hardware
 
-We had a drive base that relied on Ackerman steering, with a servo steering front wheels and DC motors driving backwheels. The chassis was made out of lasercut plywood and acrylic, and 3d printed parts. The zipline mechanism was designed so that the roller wheels interlock into each other like a zipper. This meant the reaction force from contact with the beam would help the claw stay shut. Once the robot touched the ground, that reaction component would disappear and we could safely open the claw again.
+We had a drive base that relied on Ackerman steering, with a servo steering front wheels and DC motors driving backwheels. The chassis was made out of lasercut plywood and acrylic and 3d printed parts. The zipline mechanism was designed so that the roller wheels interlock into each other like a zipper. This meant the reaction force from contact with the beam would help the claw stay shut. Once the robot touched the ground, that reaction component would disappear and we could safely open the claw again.
 
 <div class="flex gap-2">
     <img src="/images/robotcad1.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">

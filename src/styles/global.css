@@ -20,3 +20,8 @@
 .fade-in {
 	animation: fade-in 3s
 }
+
+[id] {
+	scroll-margin-top: 210px;
+}
+  

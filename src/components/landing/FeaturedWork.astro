@@ -1,24 +1,18 @@
 ---
 // Define the features array directly in the Astro component
 const features = [
-  {
-    "url": "https://www.google.com/search?q=singapore+images&sca_esv=4b8063e16ffe5089&udm=2&biw=1168&bih=653&ei=pAFyZ7qzEOqK0PEP-NrNwAs&ved=0ahUKEwi6lbPMtc6KAxVqBTQIHXhtE7gQ4dUDCBE&uact=5&oq=singapore+images&gs_lp=EgNpbWciEHNpbmdhcG9yZSBpbWFnZXMyBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHjIGEAAYBxgeMgYQABgHGB4yBhAAGAcYHkiPB1D5A1j5A3ABeACQAQCYAeYBoAHnAqoBBTAuMS4xuAEDyAEA-AEBmAIDoAL0AsICBBAAGB6YAwCIBgGSBwUxLjEuMaAHjQY&sclient=img",
-    "title": "Singapore"
-  },
-  {
-    "url": "https://www.google.com/search?q=tokyo&sca_esv=4b8063e16ffe5089&udm=2&biw=1168&bih=653&ei=qAFyZ9ilDve_0PEP7sO74AQ&ved=0ahUKEwjYmaXOtc6KAxX3HzQIHe7hDkwQ4dUDCBE&uact=5&oq=tokyo&gs_lp=EgNpbWciBXRva3lvMg0QABiABBixAxhDGIoFMgoQABiABBhDGIoFMg0QABiABBixAxhDGIoFMgoQABiABBhDGIoFMhAQABiABBixAxhDGIMBGIoFMgoQABiABBhDGIoFMhAQABiABBixAxhDGIMBGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFMgoQABiABBhDGIoFSPKLAVCTKljHiQFwCngAkAEAmAHRA6AB-SeqAQowLjI0LjUuMC4xuAEDyAEA-AEBmAIVoAKtE6gCAMICBhAAGAcYHsICCBAAGAcYChgewgIFEAAYgATCAgQQABgewgIGEAAYCBgewgILEAAYgAQYsQMYgwHCAggQABiABBixA8ICDhAAGIAEGLEDGIMBGIoFwgIEEAAYA5gDAogGAZIHCjguMTEuMS4wLjGgB5xK&sclient=img",
-    "title": "Japan"
-  },
-  {
-    "url": "https://www.google.com/search?q=honk+gong&sca_esv=4b8063e16ffe5089&udm=2&biw=1168&bih=653&ei=3QJyZ4XkIcrG0PEPmp29qA4&ved=0ahUKEwjFxuThts6KAxVKIzQIHZpOD-UQ4dUDCBE&uact=5&oq=honk+gong&gs_lp=EgNpbWciCWhvbmsgZ29uZzINEAAYgAQYsQMYQxiKBTINEAAYgAQYsQMYQxiKBTIQEAAYgAQYsQMYQxiDARiKBTIKEAAYgAQYQxiKBTINEAAYgAQYsQMYQxiKBTIKEAAYgAQYQxiKBTIKEAAYgAQYQxiKBTINEAAYgAQYsQMYQxiKBTIKEAAYgAQYsQMYCjIKEAAYgAQYsQMYCkjwGlCCEVj_GXADeACQAQCYAbEBoAGvCKoBAzIuN7gBA8gBAPgBAZgCDKAC5QjCAgYQABgHGB7CAggQABiABBixA8ICCxAAGIAEGLEDGIMBwgIOEAAYgAQYsQMYgwEYigXCAgUQABiABMICDBAAGIAEGEMYigUYCsICBxAAGIAEGAqYAwCIBgGSBwMzLjmgB9cw&sclient=img",
-    "title": "Hong Kong"
-  },
-  {
-    "url": "https://www.google.com/search?q=lake+agnes&oq=lake+agnes&gs_lcrp=EgRlZGdlKgcIABAAGIAEMgcIABAAGIAEMgcIARAAGIAEMgcIAhAAGIAEMgcIAxAAGIAEMgcIBBAAGIAEMgcIBRAAGIAEMgcIBhAAGIAEMgcIBxAAGIAE0gEHODQ5ajBqOagCALACAA&sourceid=chrome&ie=UTF-8",
-    "title": "Lake Louise"
-  }
-  // Add more features as needed...
+  { title: "Singapore" },
+  { title: "Japan" },
+  { title: "Hong Kong" },
+  { title: "Lake Louise" },
 ];
+
+const galleryIdMap = {
+  "Singapore": "Singapore",
+  "Japan": "Japan",
+  "Hong Kong": "HK",
+  "Banff": "Banff",
+};
 ---
 
 <section class="bg-primary">
@@ -27,20 +21,25 @@ const features = [
       <div
         class="h-0.5 bg-secondary"
         data-aos="fade-up"
-        data-aos-duration="1000">
+        data-aos-duration="1000"
+      >
       </div>
       <h3
         class="text-secondary text-xs font-medium"
         data-aos="fade-up"
-        data-aos-duration="1500">
+        data-aos-duration="1500"
+      >
+      <a href="/gallery" class="text-secondary hover:underline">
         <span>Places</span>
         <span class="font-bold">I've</span>
         <span class="italic">been</span>
+      </a>
       </h3>
       <div
         class="h-1.5 bg-secondary"
         data-aos="fade-up"
-        data-aos-duration="2000">
+        data-aos-duration="2000"
+      >
       </div>
       <div class="h-3 bg-secondary" data-aos="fade-up" data-aos-duration="2500">
       </div>
@@ -49,28 +48,33 @@ const features = [
       <div
         class="h-12 bg-secondary"
         data-aos="fade-up"
-        data-aos-duration="3000">
+        data-aos-duration="3000"
+      >
       </div>
       <div
         class="h-24 bg-secondary"
         data-aos="fade-up"
         data-aos-duration="3000"
-        data-aos-delay="150">
+        data-aos-delay="150"
+      >
       </div>
     </div>
 
     <ul
-      class="mx-auto flex flex-col lg:flex-row text-left gap-3 items-start text-secondary mt-3 mb-16">
+      class="mx-auto flex flex-col lg:flex-row text-left gap-3 items-start text-secondary mt-3 mb-16"
+    >
       {
-        features.map((template) => (
+        features.map((feature) => (
           <>
-            <li class="flow-root col-span-full h-full mb-16"
-                data-aos="fade-up"
-                data-aos-duration="3000"
-                data-aos-delay="150">
-              <a href={template.url} target="_blank">
+            <li
+              class="flow-root col-span-full h-full mb-16"
+              data-aos="fade-up"
+              data-aos-duration="3000"
+              data-aos-delay="150"
+            >
+              <a href={`/gallery#${galleryIdMap[feature.title]}`}>
                 <div>
-                  <p class="italic shrink-0 text-xs ">{template.title}</p>
+                  <p class="italic shrink-0 text-xs ">{feature.title}</p>
                 </div>
               </a>
             </li>

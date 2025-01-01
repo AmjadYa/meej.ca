@@ -14,7 +14,7 @@ link: https://github.com/AmjadYa/Autonomous-Robot
 
 ## Summary
 
-In the summer of 2023, I had to build a robot that could navigate an obstacle course, collect coins off the ground, and complete laps for points - with no human interference. Since we thought things weren't hard enough, our team was **one of two** to implement a zipline mechanism to short-cut a part of the course.
+In the summer of 2023, I had to build a robot that could navigate an obstacle course, collect coins off the ground and complete laps for points - with no human interference. Since we thought things weren't hard enough, our team was **one of two** to implement a zipline mechanism to short-cut a part of the course.
 
 We split the work up into three disciplines: Electrical, Hardware and Software and progressively integrated components together.
 
