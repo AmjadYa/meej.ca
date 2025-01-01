@@ -32,8 +32,9 @@ async function getWithNeighbours(slug: string) {
 	}
 
 	const projectIndex = projects.indexOf(project);
-	const previous = projects[(projectIndex - 1) % projects.length];
 	const next = projects[(projectIndex + 1) % projects.length];
+	const previous =
+		projects[(projectIndex + projects.length - 1) % projects.length];
 
 	return { ...project, previous, next };
 }

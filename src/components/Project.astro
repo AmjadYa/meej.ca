@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import GitHub from "../components/Icons/GitHub.astro";
+import ProjectNav from "../components/ProjectNav.astro";
 
 const { project } = Astro.props;
 ---
@@ -126,74 +127,12 @@ const { project } = Astro.props;
 		</div>
 	</section>
 
-	<nav
-		data-aos="fade-up"
-		data-aos-duration="2000"
-		class="mb-4 px-8 2xl:max-w-7xl mx-auto gap-8 grid grid-cols-3"
-	>
-		<a
-			class="text-sm bg-secondary text-white px-4 py-1 block flex gap-2 items-center font-bold justify-self-start"
-			href={`/project/${project.previous.data.slug}`}
-		>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="feather feather-chevron-left"
-				><polyline points="15 18 9 12 15 6"></polyline></svg
-			>
+	<ProjectNav previous={project.previous} next={project.next} />
 
-			<span>{project.previous.data.title}</span></a
-		>
-
-		<a class="text-sm text-secondary px-4 py-1 font-bold mx-auto" href="/">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="feather feather-home"
-				><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"
-				></path><polyline points="9 22 9 12 15 12 15 22"
-				></polyline></svg
-			>
-		</a>
-
-		<a
-			class="text-sm bg-secondary text-white px-4 py-1 block flex gap-2 items-center font-bold justify-self-end"
-			href={`/project/${project.next.data.slug}`}
-		>
-			<span>{project.next.data.title}</span>
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				width="24"
-				height="24"
-				viewBox="0 0 24 24"
-				fill="none"
-				stroke="currentColor"
-				stroke-width="2"
-				stroke-linecap="round"
-				stroke-linejoin="round"
-				class="feather feather-chevron-right"
-				><polyline points="9 18 15 12 9 6"></polyline></svg
-			>
-		</a>
-	</nav>
 	<main
 		data-aos="fade-up"
 		data-aos-duration="2000"
-		class="px-8 2xl:max-w-7xl mx-auto"
+		class="px-8 2xl:max-w-7xl mx-auto my-16"
 	>
 		<div class="text-center">
 			<h1 class="mt-8 text-4xl lg:text-6xl font-bold text-secondary">
@@ -218,6 +157,8 @@ const { project } = Astro.props;
 			set:html={project.rendered.html}
 		/>
 	</main>
+
+	<ProjectNav previous={project.previous} next={project.next} />
 
 	<footer class="mt-12 p-8 flex flex-col gap-2 2xl:max-w-7xl mx-auto mb-16">
 		<div

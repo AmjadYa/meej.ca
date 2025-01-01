@@ -1,222 +1,250 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Gallery from "../components/Gallery.astro";
+import HomeButton from "@/components/HomeButton.astro";
 const pictures = {
-  Singapore: [
-    {
-      href: "/images/galleryphotos/sg1.JPG",
-      alt: "happy",
-    },
-    {
-      href: "/images/galleryphotos/sg2.JPG",
-      alt: "school (NTU)",
-    },
-    {
-      href: "/images/galleryphotos/sg3.JPG",
-      alt: "spirited away",
-    },
-  ],
-  Japan: [
-    {
-      href: "/images/galleryphotos/jp1.JPG",
-      alt: "cat island",
-    },
-    {
-      href: "/images/galleryphotos/jp2.JPG",
-      alt: "dont tell anyone",
-    },
-    {
-      href: "/images/galleryphotos/jp3.JPG",
-      alt: "power",
-    },
-    {
-      href: "/images/galleryphotos/jp4.JPG",
-      alt: "serene",
-    },
-  ],
-  HK: [
-    {
-      href: "/images/galleryphotos/hk1.JPG",
-      alt: "woah",
-    },
-    {
-      href: "/images/galleryphotos/hk2.JPG",
-      alt: "0_0",
-    },
-    {
-      href: "/images/galleryphotos/hk3.JPG",
-      alt: "bird",
-    },
-  ],
-  Banff: [
-    {
-      href: "/images/galleryphotos/banff1.JPG",
-      alt: "couple",
-    },
-    {
-      href: "/images/galleryphotos/banff2.JPG",
-      alt: "i can take you",
-    },
-    {
-      href: "/images/galleryphotos/banff3.JPG",
-      alt: "watch your step",
-    },
-    {
-      href: "/images/galleryphotos/banff4.JPG",
-      alt: "",
-    },
-  ],
+	Singapore: [
+		{
+			href: "/images/galleryphotos/sg1.JPG",
+			alt: "happy",
+		},
+		{
+			href: "/images/galleryphotos/sg2.JPG",
+			alt: "school (NTU)",
+		},
+		{
+			href: "/images/galleryphotos/sg3.JPG",
+			alt: "spirited away",
+		},
+	],
+	Japan: [
+		{
+			href: "/images/galleryphotos/jp1.JPG",
+			alt: "cat island",
+		},
+		{
+			href: "/images/galleryphotos/jp2.JPG",
+			alt: "dont tell anyone",
+		},
+		{
+			href: "/images/galleryphotos/jp3.JPG",
+			alt: "power",
+		},
+		{
+			href: "/images/galleryphotos/jp4.JPG",
+			alt: "serene",
+		},
+	],
+	HK: [
+		{
+			href: "/images/galleryphotos/hk1.JPG",
+			alt: "woah",
+		},
+		{
+			href: "/images/galleryphotos/hk2.JPG",
+			alt: "0_0",
+		},
+		{
+			href: "/images/galleryphotos/hk3.JPG",
+			alt: "bird",
+		},
+	],
+	Banff: [
+		{
+			href: "/images/galleryphotos/banff1.JPG",
+			alt: "couple",
+		},
+		{
+			href: "/images/galleryphotos/banff2.JPG",
+			alt: "i can take you",
+		},
+		{
+			href: "/images/galleryphotos/banff3.JPG",
+			alt: "watch your step",
+		},
+		{
+			href: "/images/galleryphotos/banff4.JPG",
+			alt: "",
+		},
+	],
 };
 ---
 
 <BaseLayout>
-  <section class="bg-primary">
-    <div
-      class="px-8 2xl:max-w-7xl mx-auto"
-      data-aos="fade-up"
-      data-aos-duration="2000"
-    >
-    </div>
-    <div class="px-8 2xl:max-w-7xl mx-auto pb-12">
-      <div class="mt-4 space-y-2">
-        <div
-          class="h-0.5 bg-secondary"
-          data-aos="fade-up"
-          data-aos-duration="1000"
-        >
-        </div>
-        <div
-          class="flex flex-col sm:flex-row gap-3 justify-between items-center"
-          data-aos="fade-up"
-          data-aos-duration="1500"
-        >
-          <div class="flex gap-3 items-center">
-            <a href="/">
-              <h3 class="text-secondary text-xs font-medium">
-                <span>Amjad</span>
-                <span class="font-bold">Yaghi</span>
-              </h3>
-            </a>
-          </div>
-          <div>
-            <ul class="items-center inline-flex gap-3 relative">
-              <li>
-                <a
-                  href="https://www.linkedin.com/in/amjadyaghi/"
-                  class="hover:text-secondary/80 text-secondary"
-                  ><svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    x="0px"
-                    y="0px"
-                    width="16"
-                    height="16"
-                    viewBox="0 0 30 30"
-                  >
-                    <path
-                      d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"
-                      fill="currentColor"></path>
-                  </svg></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://github.com/amjadya"
-                  class="hover:text-secondary/80 text-secondary"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="16"
-                    width="16"
-                    ><path d="M0 0h24v24H0z" fill="none"></path><path
-                      d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
-                      fill="currentColor"></path></svg
-                  ></a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.youtube.com/@amjadyaghi"
-                  class="hover:text-secondary/80 text-secondary"
-                >
-                  <svg
-                    viewBox="0 0 28.57 20"
-                    height="16"
-                    width="16"
-                    preserveAspectRatio="xMidYMid meet"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <g>
-                      <path
-                        d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z"
-                        fill="#00a86b"></path>
-                      <path
-                        d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z"
-                        fill="white"></path>
-                    </g>
-                  </svg>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="mailto:amjadclnyaghi@gmail.com"
-                  class="hover:text-secondary/80 text-secondary"
-                  ><svg
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="16"
-                    width="16"
-                    ><path d="M0 0h24v24H0z" fill="none"></path><path
-                      d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"
-                      fill="currentColor"></path></svg
-                  ></a
-                >
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div
-          class="h-1.5 bg-secondary"
-          data-aos="fade-up"
-          data-aos-duration="2000"
-        >
-        </div>
-        <div
-          class="h-3 bg-secondary"
-          data-aos="fade-up"
-          data-aos-duration="2500"
-        >
-        </div>
-        <div
-          class="h-6 bg-secondary"
-          data-aos="fade-up"
-          data-aos-duration="3000"
-        >
-        </div>
-      </div>
-    </div>
-  </section>
+	<section class="bg-primary">
+		<div
+			class="px-8 2xl:max-w-7xl mx-auto"
+			data-aos="fade-up"
+			data-aos-duration="2000"
+		>
+		</div>
+		<div class="px-8 2xl:max-w-7xl mx-auto pb-12">
+			<div class="mt-4 space-y-2">
+				<div
+					class="h-0.5 bg-secondary"
+					data-aos="fade-up"
+					data-aos-duration="1000"
+				>
+				</div>
+				<div
+					class="flex flex-col sm:flex-row gap-3 justify-between items-center"
+					data-aos="fade-up"
+					data-aos-duration="1500"
+				>
+					<div class="flex gap-3 items-center">
+						<a href="/">
+							<h3 class="text-secondary text-xs font-medium">
+								<span>Amjad</span>
+								<span class="font-bold">Yaghi</span>
+							</h3>
+						</a>
+					</div>
+					<div>
+						<ul class="items-center inline-flex gap-3 relative">
+							<li>
+								<a
+									href="https://www.linkedin.com/in/amjadyaghi/"
+									class="hover:text-secondary/80 text-secondary"
+									><svg
+										xmlns="http://www.w3.org/2000/svg"
+										x="0px"
+										y="0px"
+										width="16"
+										height="16"
+										viewBox="0 0 30 30"
+									>
+										<path
+											d="M24,4H6C4.895,4,4,4.895,4,6v18c0,1.105,0.895,2,2,2h18c1.105,0,2-0.895,2-2V6C26,4.895,25.105,4,24,4z M10.954,22h-2.95 v-9.492h2.95V22z M9.449,11.151c-0.951,0-1.72-0.771-1.72-1.72c0-0.949,0.77-1.719,1.72-1.719c0.948,0,1.719,0.771,1.719,1.719 C11.168,10.38,10.397,11.151,9.449,11.151z M22.004,22h-2.948v-4.616c0-1.101-0.02-2.517-1.533-2.517 c-1.535,0-1.771,1.199-1.771,2.437V22h-2.948v-9.492h2.83v1.297h0.04c0.394-0.746,1.356-1.533,2.791-1.533 c2.987,0,3.539,1.966,3.539,4.522V22z"
+											fill="currentColor"></path>
+									</svg></a
+								>
+							</li>
+							<li>
+								<a
+									href="https://github.com/amjadya"
+									class="hover:text-secondary/80 text-secondary"
+									><svg
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+										height="16"
+										width="16"
+										><path d="M0 0h24v24H0z" fill="none"
+										></path><path
+											d="M12 2C6.475 2 2 6.475 2 12a9.994 9.994 0 0 0 6.838 9.488c.5.087.687-.213.687-.476 0-.237-.013-1.024-.013-1.862-2.512.463-3.162-.612-3.362-1.175-.113-.288-.6-1.175-1.025-1.413-.35-.187-.85-.65-.013-.662.788-.013 1.35.725 1.538 1.025.9 1.512 2.338 1.087 2.912.825.088-.65.35-1.087.638-1.337-2.225-.25-4.55-1.113-4.55-4.938 0-1.088.387-1.987 1.025-2.688-.1-.25-.45-1.275.1-2.65 0 0 .837-.262 2.75 1.026a9.28 9.28 0 0 1 2.5-.338c.85 0 1.7.112 2.5.337 1.912-1.3 2.75-1.024 2.75-1.024.55 1.375.2 2.4.1 2.65.637.7 1.025 1.587 1.025 2.687 0 3.838-2.337 4.688-4.562 4.938.362.312.675.912.675 1.85 0 1.337-.013 2.412-.013 2.75 0 .262.188.574.688.474A10.016 10.016 0 0 0 22 12c0-5.525-4.475-10-10-10z"
+											fill="currentColor"></path></svg
+									></a
+								>
+							</li>
+							<li>
+								<a
+									href="https://www.youtube.com/@amjadyaghi"
+									class="hover:text-secondary/80 text-secondary"
+								>
+									<svg
+										viewBox="0 0 28.57 20"
+										height="16"
+										width="16"
+										preserveAspectRatio="xMidYMid meet"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<g>
+											<path
+												d="M27.9727 3.12324C27.6435 1.89323 26.6768 0.926623 25.4468 0.597366C23.2197 2.24288e-07 14.285 0 14.285 0C14.285 0 5.35042 2.24288e-07 3.12323 0.597366C1.89323 0.926623 0.926623 1.89323 0.597366 3.12324C2.24288e-07 5.35042 0 10 0 10C0 10 2.24288e-07 14.6496 0.597366 16.8768C0.926623 18.1068 1.89323 19.0734 3.12323 19.4026C5.35042 20 14.285 20 14.285 20C14.285 20 23.2197 20 25.4468 19.4026C26.6768 19.0734 27.6435 18.1068 27.9727 16.8768C28.5701 14.6496 28.5701 10 28.5701 10C28.5701 10 28.5677 5.35042 27.9727 3.12324Z"
+												fill="#00a86b"></path>
+											<path
+												d="M11.4253 14.2854L18.8477 10.0004L11.4253 5.71533V14.2854Z"
+												fill="white"></path>
+										</g>
+									</svg>
+								</a>
+							</li>
+							<li>
+								<a
+									href="mailto:amjadclnyaghi@gmail.com"
+									class="hover:text-secondary/80 text-secondary"
+									><svg
+										viewBox="0 0 24 24"
+										xmlns="http://www.w3.org/2000/svg"
+										height="16"
+										width="16"
+										><path d="M0 0h24v24H0z" fill="none"
+										></path><path
+											d="M3 3h18a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm17 4.238l-7.928 7.1L4 7.216V19h16V7.238zM4.511 5l7.55 6.662L19.502 5H4.511z"
+											fill="currentColor"></path></svg
+									></a
+								>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div
+					class="h-1.5 bg-secondary"
+					data-aos="fade-up"
+					data-aos-duration="2000"
+				>
+				</div>
+				<div
+					class="h-3 bg-secondary"
+					data-aos="fade-up"
+					data-aos-duration="2500"
+				>
+				</div>
+				<div
+					class="h-6 bg-secondary"
+					data-aos="fade-up"
+					data-aos-duration="3000"
+				>
+				</div>
+			</div>
+		</div>
+	</section>
 
-  <main
-    data-aos="fade-up"
-    data-aos-duration="2000"
-    class="px-8 2xl:max-w-7xl mx-auto"
-  >
-    {
-      Object.entries(pictures).map(([title, images]) => (
-        <Gallery key={title} title={title} images={images} />
-      ))
-    }
-  </main>
-  <footer class="mt-12 p-8 flex flex-col gap-2 2xl:max-w-7xl mx-auto mb-16">
-    <div class="h-1.5 bg-secondary" data-aos="fade-up" data-aos-duration="2000">
-    </div>
-    <div class="h-3 bg-secondary" data-aos="fade-up" data-aos-duration="2500">
-    </div>
-    <div
-      class="h-6 bg-secondary flex items-end p-4"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-    >
-    </div>
-  </footer>
+	<div
+		data-aos="fade-up"
+		data-aos-duration="2000"
+		class="px-8 2xl:max-w-7xl mx-auto flex justify-center mb-8"
+	>
+		<HomeButton />
+	</div>
+
+	<main
+		data-aos="fade-up"
+		data-aos-duration="2000"
+		class="px-8 2xl:max-w-7xl mx-auto"
+	>
+		{
+			Object.entries(pictures).map(([title, images]) => (
+				<Gallery key={title} title={title} images={images} />
+			))
+		}
+	</main>
+
+	<div
+		data-aos="fade-up"
+		data-aos-duration="2000"
+		class="px-8 2xl:max-w-7xl mx-auto flex justify-center mt-16"
+	>
+		<HomeButton />
+	</div>
+
+	<footer class="mt-12 p-8 flex flex-col gap-2 2xl:max-w-7xl mx-auto mb-16">
+		<div
+			class="h-1.5 bg-secondary"
+			data-aos="fade-up"
+			data-aos-duration="2000"
+		>
+		</div>
+		<div
+			class="h-3 bg-secondary"
+			data-aos="fade-up"
+			data-aos-duration="2500"
+		>
+		</div>
+		<div
+			class="h-6 bg-secondary flex items-end p-4"
+			data-aos="fade-up"
+			data-aos-duration="3000"
+		>
+		</div>
+	</footer>
 </BaseLayout>
