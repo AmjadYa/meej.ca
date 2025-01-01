@@ -1,7 +1,8 @@
 ---
 title: Breaking Blood Clots in Zero G
-description: Studying clot behaviour for future space mission safety. 
-slug: project-4
+description: Studying clot behaviour for future space mission safety.
+slug: breaking-blood-clots-in-zero-g
+order: 4
 link: https://github.com/AmjadYa/
 ---
 

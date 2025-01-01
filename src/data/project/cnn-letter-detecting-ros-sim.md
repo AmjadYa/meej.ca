@@ -1,9 +1,9 @@
 ---
 title: CNN Letter Detecting ROS Sim
 description: Teacher kept telling me that I'm just a neural network.
-slug: project-1
+slug: cnn-letter-detecting-ros-sim
+order: 2
 link: https://github.com/AmjadYa/fizzcomp
-
 ---
 
 <div class="flex gap-2" style="justify-content: center ; align-items: center">
@@ -183,3 +183,4 @@ ChatGPT was used to help implement ideas that we already had, and for debugging.
 <p>
 In fact, this was a notable conversation with ChatGPT, as it helped to reveal that there was a mismatch between the version of the model in Google Colab and the one used locally! (Took a while to figure out what was wrong.)
 </p>
+

@@ -11,13 +11,34 @@ const { slug } = Astro.params;
 export async function getStaticPaths() {
 	const projects = await getCollection("project");
 
-	return projects.map((project) => ({
-		params: { slug: project.data.slug },
-		props: { project },
-	}));
+	return projects
+		.map((project) => ({
+			params: { slug: project.data.slug },
+			props: { project },
+			order: project.data.order ?? 0,
+		}))
+		.sort((a, b) => a.order - b.order);
 }
 
-const project = await getEntry("project", slug);
+async function getWithNeighbours(slug: string) {
+	const projects = await getCollection("project");
+
+	projects.sort((a, b) => a.data.order - b.data.order);
+
+	const project = projects.find((project) => project.data.slug === slug);
+
+	if (!project) {
+		return null;
+	}
+
+	const projectIndex = projects.indexOf(project);
+	const previous = projects[(projectIndex - 1) % projects.length];
+	const next = projects[(projectIndex + 1) % projects.length];
+
+	return { ...project, previous, next };
+}
+
+const project = await getWithNeighbours(slug);
 ---
 
 {project ? <Project project={project} /> : <p>Not found</p>}

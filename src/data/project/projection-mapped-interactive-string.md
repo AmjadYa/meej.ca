@@ -1,7 +1,8 @@
 ---
 title: Projection-Mapped Interactive String
 description: Using OpenCV and a projector to play nice chords.
-slug: project-3
+slug: projection-mapped-interactive-string
+order: 1
 link: https://github.com/AmjadYa/interactive-string
 ---
 
@@ -18,6 +19,7 @@ I chose muted off-white colours to make it look mysterious...
 ## Progress
 
 Here's a picture of my new projector pointing at the cieling and funny contour boxes drawn on my face:
+
 <div class="flex gap-2 rounded-lg" style="justify-content: center ; align-items: center">
     <img src="/images/projecting.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
     <img src="/images/myface.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
@@ -29,11 +31,11 @@ I used processing to create a string that tracks cursor movement. If your cursor
 
 Chords are randomly picked from a bank I created, however, susequent chords are picked using strategies inspired by common practices in music theory. After the string is plucked, one of seven strategies is picked. The chord pool is re-analyzed for chords that fit the criteria defined by the selected strategy. Occasionally when plucked, the string ignores the strategy and picks a random chord (so we don't get stuck in loops).
 
-Check out "pluck5.pde" from the *Click Me!* button above.
+Check out "pluck5.pde" from the _Click Me!_ button above.
 
 ### Detecting When It's Plucked
 
-Currently, I convert a live camera-feed into binary and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) This is because I plan on setting up my laptop to detect when a thin shadow (your finger) passes over the string. This will be the *pluck condition*. Check out "bound_contours_test.pde" from the *Click Me!* button above.
+Currently, I convert a live camera-feed into binary and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) This is because I plan on setting up my laptop to detect when a thin shadow (your finger) passes over the string. This will be the _pluck condition_. Check out "bound_contours_test.pde" from the _Click Me!_ button above.
 
 ## Takeaway
 

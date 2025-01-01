@@ -1,7 +1,8 @@
 ---
 title: Autonomous Mario Kart Robot
 description: Driving around a perilous terrain, no one to help...
-slug: project-2
+slug: autonomous-mario-kart-robot
+order: 3
 link: https://github.com/AmjadYa/Autonomous-Robot
 ---
 
@@ -9,8 +10,6 @@ link: https://github.com/AmjadYa/Autonomous-Robot
     <video src="/videos/robot1.mp4" muted style="max-height:400px ; aspect-ratio:1; object-fit:cover" controls></video>
     <img src="/images/robot_on_zipline.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
 </div>
-
-
 
 ## Summary
 
@@ -20,7 +19,7 @@ We split the work up into three disciplines: Electrical, Hardware and Software a
 
 ## Electrical
 
-The biggest electrical challenge was getting the right power to all our motors. We had 5V motors, 3V pins, beefy 15V DC motors and an STM-32 Blue Pill (our robot's brain) all supplied from one 15V and one 9V lithium ion battery. We soldered a robust power distribution board with a combination of buck converters and voltage dividers. Due the high currents and magnetic fields caused by the DC motors we had to curl our external wires and take care to avoid noise. 
+The biggest electrical challenge was getting the right power to all our motors. We had 5V motors, 3V pins, beefy 15V DC motors and an STM-32 Blue Pill (our robot's brain) all supplied from one 15V and one 9V lithium ion battery. We soldered a robust power distribution board with a combination of buck converters and voltage dividers. Due the high currents and magnetic fields caused by the DC motors we had to curl our external wires and take care to avoid noise.
 
 Another note is that the Blue Pill has incredibly sensitive pins (!!!). We used our oscilloscope countless times for troubleshooting pin-issues and power failures. I learned how delicate the electronics on low-power systems are.
 
@@ -47,3 +46,4 @@ We did everything in Arduino. My favourite functionality was a convolution algor
 The whole robot operated through a multi-stage loop: initially following IR signals then 90 degree turns, PID steering up a ramp, ziplining down and restarting. Additionally, we used hardware interrupts to detect edges and executed maneuvers like backing up or making sharp turns before falling off the edge.
 
 Putting the code together and getting to see the fruits of all the hardware-labour was satisfying.
+
