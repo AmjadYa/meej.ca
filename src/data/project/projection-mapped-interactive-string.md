@@ -31,11 +31,13 @@ I used processing to create a string that tracks cursor movement. If your cursor
 
 Chords are randomly picked from a bank I created, however, susequent chords are picked using strategies inspired by common practices in music theory. After the string is plucked, one of seven strategies is picked. The chord pool is re-analyzed for chords that fit the criteria defined by the selected strategy. Occasionally when plucked, the string ignores the strategy and picks a random chord (so we don't get stuck in loops).
 
-Check out "pluck5.pde" from the _Click Me!_ button above.
+Check out "pluck5.pde" from the <a href="https://github.com/AmjadYa/interactive-string" target="_blank">GitHub repository</a>.
 
 ### Detecting When It's Plucked
 
-Currently, I convert a live camera-feed into binary and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) This is because I plan on setting up my laptop to detect when a thin shadow (your finger) passes over the string. This will be the _pluck condition_. Check out "bound_contours_test.pde" from the _Click Me!_ button above.
+Currently, I convert a live camera-feed into binary and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) This is because I plan on setting up my laptop to detect when a thin shadow (your finger) passes over the string. This will be the _pluck condition_. 
+
+Check out "bound_contours_test.pde" from the <a href="https://github.com/AmjadYa/interactive-string" target="_blank">GitHub repository</a>.
 
 ## Takeaway
 

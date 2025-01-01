@@ -16,14 +16,12 @@ const humanOpinions = [
   {
     name: "Eren Burton",
     role: "Bash Magician",
-    opinion:
-    "takes all my stuff",
+    opinion: "Amjad takes all my stuff.",
   },
   {
     name: "Aysha Yaghi",
     role: "Mother of Three",
-    opinion:
-      "My son is so handsome.",
+    opinion: "My son is so handsome.",
   },
 ];
 ---
@@ -41,14 +39,12 @@ const humanOpinions = [
     <div class="grid grid-cols-1 lg:grid-cols-4 text-secondary gap-6 pt-2 mt-2">
       {
         humanOpinions.map((opinion) => (
-         <div>
+          <div>
             <p class="italic text-2xl block font-bold">
               {opinion.name} {opinion.role}
             </p>
-            <p class="text-sm leading-relaxed mt-6">
-              {opinion.opinion}
-            </p>
-         </div>
+            <p class="text-sm leading-relaxed mt-6">{opinion.opinion}</p>
+          </div>
         ))
       }
     </div>

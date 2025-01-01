@@ -3,40 +3,40 @@ import { type CollectionEntry, getCollection, getEntry } from "astro:content";
 import Project from "../../../components/Project.astro";
 
 export interface Props {
-	project: CollectionEntry<"project">;
+  project: CollectionEntry<"project">;
 }
 
 const { slug } = Astro.params;
 
 export async function getStaticPaths() {
-	const projects = await getCollection("project");
+  const projects = await getCollection("project");
 
-	return projects
-		.map((project) => ({
-			params: { slug: project.data.slug },
-			props: { project },
-			order: project.data.order ?? 0,
-		}))
-		.sort((a, b) => a.order - b.order);
+  return projects
+    .map((project) => ({
+      params: { slug: project.data.slug },
+      props: { project },
+      order: project.data.order ?? 0,
+    }))
+    .sort((a, b) => a.order - b.order);
 }
 
 async function getWithNeighbours(slug: string) {
-	const projects = await getCollection("project");
+  const projects = await getCollection("project");
 
-	projects.sort((a, b) => a.data.order - b.data.order);
+  projects.sort((a, b) => a.data.order - b.data.order);
 
-	const project = projects.find((project) => project.data.slug === slug);
+  const project = projects.find((project) => project.data.slug === slug);
 
-	if (!project) {
-		return null;
-	}
+  if (!project) {
+    return null;
+  }
 
-	const projectIndex = projects.indexOf(project);
-	const next = projects[(projectIndex + 1) % projects.length];
-	const previous =
-		projects[(projectIndex + projects.length - 1) % projects.length];
+  const projectIndex = projects.indexOf(project);
+  const next = projects[(projectIndex + 1) % projects.length];
+  const previous =
+    projects[(projectIndex + projects.length - 1) % projects.length];
 
-	return { ...project, previous, next };
+  return { ...project, previous, next };
 }
 
 const project = await getWithNeighbours(slug);

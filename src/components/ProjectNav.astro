@@ -5,50 +5,50 @@ const { previous, next } = Astro.props;
 ---
 
 <nav
-	data-aos="fade-up"
-	data-aos-duration="2000"
-	class="px-8 2xl:max-w-7xl mx-auto gap-8 grid grid-cols-3"
+  data-aos="fade-up"
+  data-aos-duration="2000"
+  class="px-8 2xl:max-w-7xl mx-auto gap-8 grid grid-cols-3"
 >
-	<a
-		class="text-sm bg-secondary text-white px-4 py-1 block flex gap-2 items-center font-bold justify-self-start"
-		href={`/project/${previous.data.slug}`}
-	>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="feather feather-chevron-left"
-			><polyline points="15 18 9 12 15 6"></polyline></svg
-		>
+  <a
+    class="text-sm bg-secondary text-white px-4 py-1 block flex gap-2 items-center font-bold justify-self-start"
+    href={`/project/${previous.data.slug}`}
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-chevron-left"
+      ><polyline points="15 18 9 12 15 6"></polyline></svg
+    >
 
-		<span>{previous.data.title}</span></a
-	>
+    <span>{previous.data.title}</span></a
+  >
 
-	<HomeButton />
+  <HomeButton />
 
-	<a
-		class="text-sm bg-secondary text-white px-4 py-1 block flex gap-2 items-center font-bold justify-self-end"
-		href={`/project/${next.data.slug}`}
-	>
-		<span>{next.data.title}</span>
-		<svg
-			xmlns="http://www.w3.org/2000/svg"
-			width="24"
-			height="24"
-			viewBox="0 0 24 24"
-			fill="none"
-			stroke="currentColor"
-			stroke-width="2"
-			stroke-linecap="round"
-			stroke-linejoin="round"
-			class="feather feather-chevron-right"
-			><polyline points="9 18 15 12 9 6"></polyline></svg
-		>
-	</a>
+  <a
+    class="text-sm bg-secondary text-white px-4 py-1 block flex gap-2 items-center font-bold justify-self-end"
+    href={`/project/${next.data.slug}`}
+  >
+    <span>{next.data.title}</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      stroke-width="2"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      class="feather feather-chevron-right"
+      ><polyline points="9 18 15 12 9 6"></polyline></svg
+    >
+  </a>
 </nav>
