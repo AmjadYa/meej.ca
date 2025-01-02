@@ -20,13 +20,13 @@ const { props } = Astro;
   >
   </div>
   <section
-    class="flex gap-4 w-full flex-wrap sm:flex-nowrap"
+    class="flex gap-4 w-full"
     data-aos="fade-up"
     data-aos-duration="2500"
   >
     {
       props.images?.map(({ href, alt }) => (
-        <div class="max-w-full flex-1">
+        <div class="max-w-full flex-1 flex-wrap sm:flex-nowrap">
           <img class="object-cover w-full h-full" alt={alt} src={href} />
         </div>
       ))
