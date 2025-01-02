@@ -6,7 +6,7 @@ order: 2
 link: https://github.com/AmjadYa/fizzcomp
 ---
 
-<div class="flex flex-wrap gap-2" style="justify-content: center ; align-items: center">
+<div class="flex gap-2" style="justify-content: center ; align-items: center">
     <video src="/videos/CNN competition.MOV" place-content-center muted style="max-height:400px ; object-fit:cover" controls></video>
 </div>
 

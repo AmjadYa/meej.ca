@@ -20,7 +20,7 @@ I chose muted off-white colours to make it look mysterious...
 
 Here's a picture of my new projector pointing at the cieling and funny contour boxes drawn on my face:
 
-<div class="flex flex-wrap gap-2 rounded-lg" style="justify-content: center ; align-items: center">
+<div class="flex flex-wrap sm:flex-nowrap gap-2 rounded-lg" style="justify-content: center ; align-items: center">
     <img src="/images/projecting.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
     <img src="/images/myface.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
 </div>
