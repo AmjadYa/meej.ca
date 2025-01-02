@@ -6,7 +6,7 @@ order: 3
 link: https://github.com/AmjadYa/Autonomous-Robot
 ---
 
-<div class="flex gap-2">
+<div class="flex gap-2 flex-wrap sm:flex-nowrap">
     <video src="/videos/robot1.mp4" muted style="max-height:400px ; aspect-ratio:1; object-fit:cover" controls></video>
     <img src="/images/robot_on_zipline.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
 </div>
@@ -23,7 +23,7 @@ The biggest electrical challenge was getting the right power to all our motors. 
 
 Another note is that the Blue Pill has incredibly sensitive pins (!!!). We used our oscilloscope countless times for troubleshooting pin-issues and power failures. I learned how delicate the electronics on low-power systems are.
 
-<div class="flex gap-2">
+<div class="flex flex-wrap sm:flex-nowrap gap-2">
     <img src="/images/h bridge.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
     <img src="/images/wired up.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
 </div>
@@ -32,7 +32,7 @@ Another note is that the Blue Pill has incredibly sensitive pins (!!!). We used 
 
 Our drive base utilized Ackerman steering, with a servo directing the front wheels and DC motors powering the rear wheels. The chassis was made out of lasercut plywood, acrylic and 3d printed parts. The zipline mechanism was designed so that the roller wheels interlock into each other like a zipper. This meant the reaction force from contact with the beam would help the claw stay shut. Once the robot touched the ground, that reaction component would disappear and we could safely open the claw again.
 
-<div class="flex gap-2">
+<div class="flex flex-wrap sm:flex-nowrap gap-2">
     <img src="/images/robotcad1.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
     <img src="/images/robotcad2.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
 </div>
@@ -46,4 +46,3 @@ We implemented everything using Arduino. My favorite feature was a convolution a
 The whole robot operated through a multi-stage loop: initially following IR signals then 90 degree turns, PID steering up a ramp, ziplining down and restarting. Additionally, we used hardware interrupts to detect edges and execute maneuvers like backing up or making sharp turns before falling off the edge.
 
 Putting the code together and getting to see the fruits of all the hardware-labour was satisfying.
-

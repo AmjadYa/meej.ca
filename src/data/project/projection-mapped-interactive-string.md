@@ -20,7 +20,7 @@ I chose muted off-white colours to make it look mysterious...
 
 Here's a picture of my new projector pointing at the cieling and funny contour boxes drawn on my face:
 
-<div class="flex gap-2 rounded-lg" style="justify-content: center ; align-items: center">
+<div class="flex flex-wrap sm:flex-nowrap gap-2 rounded-lg">
     <img src="/images/projecting.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
     <img src="/images/myface.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
 </div>
@@ -35,7 +35,7 @@ Check out "pluck5.pde" from the <a href="https://github.com/AmjadYa/interactive-
 
 ### Detecting When It's Plucked
 
-I convert my camera feed into binary (black and white) and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) This is because I plan on setting up my laptop to detect when a thin shadow (your finger) passes over the string. This will be the _pluck condition_. 
+I convert my camera feed into binary (black and white) and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) This is because I plan on setting up my laptop to detect when a thin shadow (your finger) passes over the string. This will be the _pluck condition_.
 
 Check out "bound_contours_test.pde" from the <a href="https://github.com/AmjadYa/interactive-string" target="_blank">GitHub repository</a>.
 
