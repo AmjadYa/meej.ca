@@ -6,7 +6,7 @@ order: 3
 link: https://github.com/AmjadYa/Autonomous-Robot
 ---
 
-<div class="flex gap-2">
+<div class="flex gap-2 flex-wrap">
     <video src="/videos/robot1.mp4" muted style="max-height:400px ; aspect-ratio:1; object-fit:cover" controls></video>
     <img src="/images/robot_on_zipline.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
 </div>
@@ -46,4 +46,3 @@ We implemented everything using Arduino. My favorite feature was a convolution a
 The whole robot operated through a multi-stage loop: initially following IR signals then 90 degree turns, PID steering up a ramp, ziplining down and restarting. Additionally, we used hardware interrupts to detect edges and execute maneuvers like backing up or making sharp turns before falling off the edge.
 
 Putting the code together and getting to see the fruits of all the hardware-labour was satisfying.
-
