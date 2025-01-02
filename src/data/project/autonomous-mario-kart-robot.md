@@ -30,7 +30,7 @@ Another note is that the Blue Pill has incredibly sensitive pins (!!!). We used 
 
 ## Hardware
 
-We had a drive base that relied on Ackerman steering, with a servo steering the front wheels and DC motors driving the backwheels. The chassis was made out of lasercut plywood, acrylic and 3d printed parts. The zipline mechanism was designed so that the roller wheels interlock into each other like a zipper. This meant the reaction force from contact with the beam would help the claw stay shut. Once the robot touched the ground, that reaction component would disappear and we could safely open the claw again.
+Our drive base utilized Ackerman steering, with a servo directing the front wheels and DC motors powering the rear wheels. The chassis was made out of lasercut plywood, acrylic and 3d printed parts. The zipline mechanism was designed so that the roller wheels interlock into each other like a zipper. This meant the reaction force from contact with the beam would help the claw stay shut. Once the robot touched the ground, that reaction component would disappear and we could safely open the claw again.
 
 <div class="flex gap-2">
     <img src="/images/robotcad1.jpg" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
@@ -41,9 +41,9 @@ We had a drive base that relied on Ackerman steering, with a servo steering the 
 
 This project was where I fell in love with firmware; it's fun turning abstract instructions into actions.
 
-We did everything in Arduino. My favourite functionality was a convolution algorithm that processed input from a 1kHz infrared beacon at the end of the track. This allowed us to detect the light we wanted to follow amidst potential noise and other IR sources. The algo would sample and normalize IR data (from IR sensors attached at the front), then convolve it with a predefined 1kHz wave and threshold the resulting sum to decide if the beacon was detected.
+We implemented everything using Arduino. My favorite feature was a convolution algorithm that processed input from a 1kHz infrared beacon located at the end of the track. This enabled us to detect the desired light signal amidst potential noise and other IR sources. We sampled and normalized the IR data from front-mounted sensors, convolved it with a predefined 1kHz wave and applied a threshold to the resulting sum to determine whether the beacon was detected.
 
-The whole robot operated through a multi-stage loop: initially following IR signals then 90 degree turns, PID steering up a ramp, ziplining down and restarting. Additionally, we used hardware interrupts to detect edges and executed maneuvers like backing up or making sharp turns before falling off the edge.
+The whole robot operated through a multi-stage loop: initially following IR signals then 90 degree turns, PID steering up a ramp, ziplining down and restarting. Additionally, we used hardware interrupts to detect edges and execute maneuvers like backing up or making sharp turns before falling off the edge.
 
 Putting the code together and getting to see the fruits of all the hardware-labour was satisfying.
 
