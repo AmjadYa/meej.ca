@@ -14,7 +14,7 @@ link: https://github.com/AmjadYa/fizzcomp
 
 <h3>Background of the Report</h3>
 <p>
-This project was the culmination of <strong>eight</strong> labs that provided the essential background to develop a fully autonomous, line-following robot for the semester's end competition. This report details the development and implementation of a control system and Convolutional Neural Network (CNN) enabling the robot to detect and read clue plates, navigate a predefined track and avoid obstacles. The labs were very useful! For a personal logbook of all labs and related thoughts, you can click <a href="/public/pdfs/Amjad%20Yaghi%20individual%20logbook.pdf" target="_blank">here</a>.
+This project was the culmination of <strong>eight</strong> labs that provided the essential background to develop a fully autonomous, line-following robot for the semester's end competition. This report details the development and implementation of a control system and Convolutional Neural Network (CNN) enabling the robot to detect and read clue plates, navigate a predefined track and avoid obstacles. The labs were very useful! For a personal logbook of all labs and related thoughts, you can click <a href="/pdfs/Amjad%20Yaghi%20individual%20logbook.pdf" target="_blank">here</a>.
 </p>
 
 <h3>Contribution Split</h3>
@@ -183,4 +183,3 @@ ChatGPT was used to help implement ideas that we already had, and for debugging.
 <p>
 In fact, this was a notable conversation with ChatGPT, as it helped to reveal that there was a mismatch between the version of the model in Google Colab and the one used locally! (Took a while to figure out what was wrong.)
 </p>
-

@@ -16,10 +16,11 @@ You can view a summary of the year-long project here:
 
 <div style="text-align: center; margin-top: 20px;">
     <h3>Critical Design Review Slides</h3>
-    <p><a href="/public/pdfs/CDR Slides.pdf" target="_blank">View Fullscreen</a></p>
-    <iframe src="/public/pdfs/CDR Slides.pdf" style="width: 100%; height: 80vh; mx-auto"></iframe>
+    <p><a href="/pdfs/CDR Slides.pdf" target="_blank">View Fullscreen</a></p>
+    <iframe src="/pdfs/CDR Slides.pdf" style="width: 100%; height: 80vh; mx-auto"></iframe>
 </div>
 
 ## The Test
 
 Two lucky members from our team got on a parabolic flight and ran our test! Due to timing conflicts with my previous project, I wasn't one of the two - but check out this really cool <a href="https://www.linkedin.com/posts/ubc-rocket_ubc-canrgx-activity-7109263823215218688-7RUi/?utm_source=share&utm_medium=member_desktop " target="_blank">post about the experience</a>.
+
