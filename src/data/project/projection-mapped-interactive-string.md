@@ -8,8 +8,8 @@ link: https://github.com/AmjadYa/interactive-string
 
 ## Demo Video
 
-<div class="flex gap-2 flex-wrap sm:flex-nowrap">
-    <video src="/videos/pluck with glove.mp4" muted style="justify-content: center ; align-items: center max-height:400px ; aspect-ratio:1; object-fit:cover" controls></video>
+<div class="flex gap-2" style="justify-content: center ; align-items: center">
+    <video src="/videos/pluck with glove.mp4" place-content-center muted style="max-height:400px ; object-fit:cover" controls></video>
 </div>
 
 _Make sure you unmute the video if you want to hear what it sounds like :)_
