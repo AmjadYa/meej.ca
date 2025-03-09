@@ -6,6 +6,12 @@ order: 1
 link: https://github.com/AmjadYa/interactive-string
 ---
 
+## Demo Video
+
+<div class="flex gap-2 flex-wrap sm:flex-nowrap">
+    <video src="/videos/pluck with glove.mp4" muted style="max-height:400px ; aspect-ratio:1; object-fit:cover" controls></video>
+</div>
+
 ## The Vision
 
 Ever since I learned about projection mapping, I have been wanting to try it for myself. I'm particularly inspired by this creator named <a href="https://www.instagram.com/roelofknol/?hl=en" target="_blank">Roelof Knol</a>, who's projections are always interactive. In this project, I wanted to project a guitar string on my wall and touch its image to play nice chords.
@@ -16,18 +22,13 @@ Ever since I learned about projection mapping, I have been wanting to try it for
 
 I chose muted off-white colours to make it look mysterious...
 
-## Progress
+## Current Progress
 
-Here's a picture of my new projector pointing at the cieling and funny contour boxes drawn on my face:
-
-<div class="flex flex-wrap sm:flex-nowrap gap-2 rounded-lg">
-    <img src="/images/projecting.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
-    <img src="/images/myface.JPG" style="max-height:400px ; aspect-ratio:1 ; object-fit:cover">
-</div>
+It works nicely with a glove! I have to play around with thresholding and lighting a little more to get it to work with just my finger. Check out the video at the top of this document to see what it looks like currently.
 
 ### The String
 
-I used Processing to create a string that tracks cursor movement. If your cursor gets close to the string it plays a chord and vibrates. Cute little particles emenate from the string each time it's plucked too.
+I used Processing to create a virtual string. If a contour gets close to the string it plays a chord and vibrates. Cute little particles emenate from the string each time it's plucked too.
 
 Chords are randomly picked from a bank I created, however, susequent chords are picked using strategies inspired by common practices in music theory. After the string is plucked, one of seven strategies is picked. The chord pool is then re-analyzed for chords that fit the criteria defined by the selected strategy. Occasionally when plucked, the string ignores the strategy and picks a random chord (so we don't get stuck in loops).
 
@@ -35,10 +36,6 @@ Check out "pluck5.pde" from the <a href="https://github.com/AmjadYa/interactive-
 
 ### Detecting When It's Plucked
 
-I convert my camera feed into binary (black and white) and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) This is because I plan on setting up my laptop to detect when a thin shadow (your finger) passes over the string. This will be the _pluck condition_.
+I convert my camera feed into binary (black and white) and detect the largest black spaces. (In reality I invert the image and detect the largest white contours.) When a thin shadow (your finger) passes over the string it _plucks_ the string starting at the x-value of the contour.
 
-Check out "bound_contours_test.pde" from the <a href="https://github.com/AmjadYa/interactive-string" target="_blank">GitHub repository</a>.
-
-## Takeaway
-
-I love augmented reality projects and will pursue more complex ideas as I get better.
+Check out "center_contours.pde" from the <a href="https://github.com/AmjadYa/interactive-string" target="_blank">GitHub repository</a>.
